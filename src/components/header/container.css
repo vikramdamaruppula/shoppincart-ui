@@ -1,0 +1,124 @@
+p{
+    margin:0;
+    padding: 0;
+    font-size: 14px;
+}
+.section-main{
+     background-color: #EFF1F999;
+}
+.section-text{
+    color: #45464E;
+    font-size: 16px;
+    line-height: 19px;
+}
+.section-button{
+    height: 36px;
+    background-color: #5570F1;
+    font-size: 14px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.section-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+.plus-icon{
+   height: 24px;
+   width: 24px; 
+   padding-right: 12px;
+}
+.section-top{
+    padding: 0px 21px;
+}
+.card-main{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 14px;
+}
+.card-container{
+    height:auto ;
+    width: 645px;
+    /* background-color: #5570F1; */
+    border-radius: 12px;
+    padding: 11px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.card-below{
+    display: flex;
+}
+.left-content{
+    width: 45%;
+}
+.left-content p:nth-child(2){
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+.card-text{
+    margin-bottom:12px;
+}
+
+@media(max-width:768px){
+    .section-text{
+        color: #45464E;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .section-button{
+        font-size: 12px;
+        border-radius: 10px;
+        width: 140px;
+    }
+    .section-container{
+        display: flex;
+        padding: 10px 0px;
+        gap: 12px;
+    }
+    .plus-icon{
+       height: 18px;
+       width: 18px; 
+       padding-right: 10px;
+    }
+    .section-top{
+        padding: 0px 21px;
+    }
+    .card-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 14px;
+        gap: 12px;
+
+    }
+    .card-container{
+        height:auto ;
+        width: 92%;
+        background-color: #5570F1;
+        border-radius: 12px;
+        padding: 11px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .card-below{
+        display: flex;
+    }
+    .left-content p:nth-child(2){
+        font-size: 18px;
+        line-height: 24px;
+    }
+}

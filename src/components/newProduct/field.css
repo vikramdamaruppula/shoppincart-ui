@@ -1,0 +1,284 @@
+.main-section{
+    background-color: #EFF1F999;
+    padding: 0px 21px 34px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* height: fit-content; */
+}
+.left-main-section{
+    flex: 1 1 auto;
+}
+.field-left-main{
+    padding: 28px;
+    background-color: #fff;
+    width: 840px;
+    display: flex;
+    justify-content: space-between;
+    gap: 26px;
+    border-radius: 12px;
+}
+.field-right-main{
+    padding: 28px;
+    width: 390px;
+    background-color: #fff;
+    border-radius: 12px;
+    flex: 1 1 auto;
+
+}
+.field-left{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.field-right{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: relative;
+}
+.num-input-container{
+    display: flex;
+    justify-content: space-between;
+}
+.field-num-input{
+    width: 140px;
+    height: 52px;
+    background-color:#EFF1F999 ;
+    border: none;
+    outline: none;
+    padding: 0px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.field-input{
+    min-width: 325px;
+    height: 52px;
+    background-color:#EFF1F999 ;
+    border: none;
+    outline: none;
+    padding: 0px 22px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.toggle-text{
+    font-size: 16px;
+    line-height: 18px;
+    color: #8B8D97;
+
+}
+.toggle-main-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0px 4px; */
+}
+.toggle-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-area{
+    max-width: 260px;
+    min-width:375px;
+    max-height: 152px;
+    min-height: 80px;
+    background-color:#EFF1F999 ;
+    border: none;
+    outline: none;
+    padding: 24px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.long-text{
+    color: #5E6366;
+    margin: 4px 0px;
+}
+.clock{
+    height:22px ;
+    width: 22px;
+    padding-right: 10px;
+}
+.button-container-clock{
+    display: flex;
+    gap: 32px;
+    margin-top: 8px;
+    text-align: center;
+}
+.clock-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    background-color: #EFF1F999;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+}
+/*  right -container ========*/
+.upload-bottom{
+    width: 172px;
+    height: auto;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F4F5FA;
+    border-radius: 10px;
+    position: relative;
+    padding: 12px;
+    border: 1px solid #A6A8B1;
+}
+.upload-bottom-2{
+    border: 1px dashed #A6A8B1;
+    background-color: inherit ;
+}
+.bottom-upload-container{
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 14px;
+}
+.upload-box{
+    width: 370px;
+    height: 306px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4F5FA;
+    border-radius: 10px;
+    position: relative;
+    border: 1px solid #A6A8B1;
+}
+.file-input{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.upload-info{
+    text-align: center;
+   color: #8B8D97;
+    padding: 0px 28px;
+}
+.upload-text{
+    color: #5570F1;
+}
+
+.cloud-image{
+    position: relative;
+    top: 4px;
+    right: 8px;
+}  
+
+.delete-icon-container{
+    display: flex;
+    gap: 12px;
+    position: relative;
+    top: 27px;
+    left: 122px;
+    z-index: 2;
+}
+.t-shirt{
+    position: relative;
+    bottom: 22px;
+}
+.t-shirt-bottom{
+    height: 112px;
+}
+.image-uploaded{
+    background-color: #fff;
+}
+
+
+
+@media(max-width:768px){
+    .main-section{
+        flex-direction: column;
+        padding: 0px 18px 28px;
+        gap: 16px;
+        height: auto;
+    }
+    .field-left-main{
+        padding: 18px;
+        background-color: #fff;
+        width: 92%;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .field-left{
+        gap: 10px;
+    }
+    .field-right-main{
+        padding: 18px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .field-input{
+        min-width:92%;
+        height: 46px; 
+        padding: 0px 18px;    
+        font-size: 14px;
+    }
+    .field-num-input{
+        min-width: 36%;
+        gap: 4px;
+        height: 46px;
+        padding: 0px 18px;
+        font-size: 14px;
+    }
+    .toggle-text{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .text-area{
+        max-width: 92%;
+        min-width:90%;
+        max-height: 100px;
+        min-height: 120px;
+        padding: 20px 10px;
+        font-size: 14px;
+    }
+    /* right container ======= */
+    .upload-box{
+        min-width: 92%;
+        height: 180px;
+    }
+    .upload-text{
+        font-size: 14px;
+    }
+    .upload-info{
+        font-size: 14px;
+        padding: 0px 22px;
+    }
+    .t-shirt{
+        width: 180px;
+        height: 180px;
+        position: relative;
+        bottom: 22px;
+    }
+    .upload-bottom{
+        width: 75%;
+        height: auto;
+        background-color: antiquewhite;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #F4F5FA;
+        border-radius: 10px;
+        position: relative;
+        padding: 8px;
+        border: 1px solid #A6A8B1;
+    }
+}

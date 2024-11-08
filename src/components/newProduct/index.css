@@ -1,0 +1,46 @@
+.button-container{
+    display: flex;
+    gap: 16px;
+}
+
+.select-new{
+    background-color: #1C1D22;
+    color: #fff;
+    height: 36px;
+    border-radius: 8px;
+    padding: 0px 8px;
+    font-size: 14px;
+
+}
+.section-button-new{
+    height: 36px;
+    background-color: #5570F1;
+    font-size: 14px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    width: 160px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width:768px){
+    .button-container{
+        gap: 5px;
+    }
+    .select-new{
+        padding: 0px 4px;
+        font-size: 12px;
+        width: 120px;
+    }
+    .section-button-new{
+
+        font-size: 12px;
+        width: 120px;
+       
+    }
+}

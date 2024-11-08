@@ -1,0 +1,36 @@
+.table-select{
+    /* padding: 4px; */
+    background-color: #5E636614;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 24px;
+}
+.sort-image{
+    position: relative;
+    top: 4px;
+}
+.published{
+    background-color: #5570F129;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #5570F1;
+}
+.not-published{
+    background-color:#FFF2E2 ;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #1C1D22;
+}
+.iphone-img{
+    width:36px ;
+    height: 36px;
+}
+
+@media(max-width:768px){
+    .sort-image{
+        display: none;
+    }
+}
