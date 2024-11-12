@@ -11,7 +11,9 @@ const Containers = () => {
   const handleNewProduct = () => {
     navigate("/inventory/Newinventory");
   };
-
+  const handleBack = () => {
+    navigate("/login");
+  };
   return (
     <section className="section-main">
       <div className="section-top">
@@ -20,6 +22,10 @@ const Containers = () => {
           <button onClick={handleNewProduct} className="section-button">
             <img className="plus-icon" src={plus} />
             <span> Add New Product </span>
+          </button>
+          <button onClick={handleBack} className="section-button">
+            <img className="plus-icon" src={plus} />
+            <span> Go Back Login </span>
           </button>
         </div>
         {/* ===================  big cards  =============== */}

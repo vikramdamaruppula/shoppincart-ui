@@ -1,17 +1,16 @@
 import React from "react";
-// import arrow from "../../Assets/sidebar/arrow.svg";
-// import calender from "../../Assets/filter/Calendar.svg";
-// import clock from "../../Assets/filter/clock.svg";
+
 import image from "../../Assets/filter/Image.svg";
 import cloud from "../../Assets/filter/cloud.svg";
 import LeftContainer from "./LeftContainer";
 import "./field.css";
 
-const Fields = () => {
+const Fields = (props) => {
+  const { click } = props;
   return (
     <section className="main-section">
       {/* ============== left container  */}
-      <LeftContainer />
+      <LeftContainer click={click} />
       {/* Right container =============== */}
       <div className="field-right-main">
         <div className="field-right">

@@ -3,72 +3,120 @@ import calender from "../../Assets/filter/Calendar.svg";
 import clock from "../../Assets/filter/clock.svg";
 import { Switch } from "@mui/material";
 
-const LeftContainer = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  const [isChecked1, setIsChecked1] = useState(false);
+const LeftContainer = (props) => {
+  const { click } = props;
+  const [formValues, setFormValues] = useState({
+    productName: "",
+    productCategory: "Select Product Category",
+    quantiy1: "",
+    quantiy2: "",
+    orderType: "ordertype",
+    expirydate: false,
+    addDiscount: false,
+  });
 
-  const [isChecked2, setIsChecked2] = useState(false);
+  // console.log(formValues);
 
-  const handleToggle = () => {
-    setIsChecked(!isChecked);
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   };
-  const handleToggle1 = () => {
-    setIsChecked1(!isChecked1);
-  };
-  const handleToggle2 = () => {
-    setIsChecked2(!isChecked2);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (formValues !== "") {
+      console.log(formValues);
+    }
   };
   return (
     <section className="left-main-section">
       <div className="field-left-main">
         {/* section left ======================= */}
-        <div className="field-left">
-          <input placeholder="Product Name" className="field-input" />
-          <select className="field-input">
-            <option>Select Product Category</option>
-            <option>Save for later</option>
-            <option>Save as Document</option>
-          </select>
-          <div className="num-input-container">
+        <form onSubmit={handleSubmit}>
+          <div className="field-left">
             <input
-              type="number"
+              name="productName"
+              value={formValues.productName}
+              onChange={handleChange}
               placeholder="Product Name"
-              className="field-num-input"
+              className="field-input"
+              required
             />
-            <input
-              type="number"
-              placeholder="Product Name"
-              className="field-num-input"
-            />
-          </div>
-          <select className="field-input">
-            <option>Order Type</option>
-            <option>Save for later</option>
-            <option>Save as Document</option>
-          </select>
-          <div className="toggle-main-container">
-            <p className="toggle-text">Expiry Date</p>
-            <div className="toggle-container">
-              <p className="toggle-text">Add Expiry Date</p>
-              <Switch
-                checked={isChecked}
-                onChange={handleToggle}
-                color="primary"
+            <select
+              name="productCategory"
+              onChange={handleChange}
+              value={formValues.productCategory}
+              className="field-input"
+            >
+              <option>Select Product Category</option>
+              <option>Save for later</option>
+              <option>Save as Document</option>
+            </select>
+            <div className="num-input-container">
+              <input
+                type="number"
+                placeholder="Product Name"
+                className="field-num-input"
+                name="quantiy1"
+                value={formValues.quantiy1}
+                onChange={handleChange}
+                required
+              />
+              <input
+                type="number"
+                placeholder="Product Name"
+                className="field-num-input"
+                name="quantiy2"
+                value={formValues.quantiy2}
+                onChange={handleChange}
+                required
               />
             </div>
-          </div>
-          <div className="toggle-main-container">
-            <p className="toggle-text">Discount</p>
-            <div className="toggle-container">
-              <p className="toggle-text">Add Discount</p>
-              <Switch
-                checked={isChecked1}
-                onChange={handleToggle1}
-                color="primary"
-              />
+            <select
+              name="orderType"
+              value={formValues.orderType}
+              className="field-input"
+              onChange={handleChange}
+            >
+              <option value="ordertype">Order Type</option>
+              <option value="savefor">Save for later</option>
+              <option value="savefordocs">Save as Document</option>
+            </select>
+            <div className="toggle-main-container">
+              <p className="toggle-text">Expiry Date</p>
+              <div className="toggle-container">
+                <p className="toggle-text">Add Expiry Date</p>
+                <Switch
+                  name="expirydate"
+                  value={formValues.expirydate}
+                  color="primary"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+            <div className="toggle-main-container">
+              <p className="toggle-text">Discount</p>
+              <div className="toggle-container">
+                <p className="toggle-text">Add Discount</p>
+                <Switch
+                  name="addDiscount"
+                  value={formValues.addDiscount}
+                  onChange={handleChange}
+                  color="primary"
+                />
+              </div>
+            </div>
+            <div>
+              <button className="section-button-new" type="submit">
+                {" "}
+                Submit Details
+              </button>
             </div>
           </div>
-        </div>
+        </form>
 
         {/* section right ============== */}
         <div className="field-right">
@@ -81,8 +129,8 @@ const LeftContainer = () => {
             <div className="toggle-container">
               <p className="toggle-text">Add Discount</p>
               <Switch
-                checked={isChecked2}
-                onChange={handleToggle2}
+                // checked={isChecked2}
+                // onChange={handleToggle2}
                 color="primary"
               />
             </div>

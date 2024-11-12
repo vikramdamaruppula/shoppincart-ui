@@ -1,16 +1,15 @@
 import React from "react";
 import Header from "../header/Header";
-import icon from "../../Assets/sidebar/icon.svg";
-import icon1 from "../../Assets/sidebar/icon1.svg";
-import plus from "../../Assets/sidebar/plus.svg";
-import baggy from "../../Assets/filter/baggy.svg";
 
-import "./index.css";
-import ProductTable from "../header/Table";
+import baggy from "../../Assets/filter/baggy.svg";
 import Filter from "../header/Filter";
 import NewMiddleSection from "./NewMiddleSection";
 
+import "./index.css";
+import { useNavigate } from "react-router-dom";
+
 const ProductDetails = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Header />
@@ -30,7 +29,10 @@ const ProductDetails = () => {
                   <option>Save for later</option>
                   <option>Save as Document</option>
                 </select>
-                <button className="section-button-new unpublish-text">
+                <button
+                  onClick={() => navigate("/analytics")}
+                  className="section-button-new unpublish-text"
+                >
                   <span> Unpublish product </span>
                 </button>
               </div>

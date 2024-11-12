@@ -14,7 +14,11 @@ import music from "../../Assets/sidebar/Logout.png";
 import "./index.css";
 import { useNavigate } from "react-router-dom";
 
-const Sidebar = () => {
+const Sidebar = ({ setUserDetails }) => {
+  const handleLogout = () => {
+    setUserDetails({ loggedIn: false });
+  };
+
   const navigate = useNavigate();
   return (
     <aside className="aside-container">
@@ -22,7 +26,7 @@ const Sidebar = () => {
         <div className="main-container-2">
           <div className="item-container">
             <img
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/inventory")}
               src={logo}
               alt="logo"
               className="img-logo"
@@ -43,7 +47,12 @@ const Sidebar = () => {
             <img src={music} alt="logo" className="img-all" />
           </div>
           <div className="item-container item-container-4">
-            <img src={frame9} alt="logo" className="img-all" />
+            <img
+              onClick={handleLogout}
+              src={frame9}
+              alt="logo"
+              className="img-all"
+            />
           </div>
 
           <div className=" mobile-container">

@@ -1,0 +1,34 @@
+
+.login-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin: auto;
+    background-color: #EFF1F999;
+    margin-top: 80px;
+}
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-text{
+    color: #4b006e;
+    text-align: center;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}

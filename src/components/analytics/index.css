@@ -1,0 +1,17 @@
+.analytics-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .chart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .analtyic-text{
+    color: blue;
+    text-align: center;
+  }
